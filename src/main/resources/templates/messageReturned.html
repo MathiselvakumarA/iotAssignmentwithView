@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Message</title>
+</head>
+<body>
+	<h1>API Returned the following message:</h1>
+	<br />
+	<table border="1">
+		<tr>
+			<td th:utext="${message}"></td>
+		</tr>
+	</table>
+	<br />
+	<table>
+		<tr>
+			<th><a th:href="@{/equipmentsService/}">Back to Index</a></th>
+		</tr>
+	</table>
+</body>
+</html>

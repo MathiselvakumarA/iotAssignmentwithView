@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Retrieve Equipment by Equipment Number</title>
+</head>
+<body>
+	<h1>Enter equipment number:</h1>
+	<form th:action="@{/equipmentsService/equipment/equipmentNumber}"
+		th:object="${equipmentNumber}" method="get">
+		<table border="1">
+			<tr>
+				<td><label for="equipmentNumber">Equipment Number: </label></td>
+				<td><input type="number" id="equipmentNumber"
+					name="equipmentNumber" autofocus="autofocus" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Search Equipment"
+					style="margin-left: 30%; font-weight: 700;" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+	<table>
+		<tr>
+			<th><a th:href="@{/equipmentsService/}">Back to Index</a></th>
+		</tr>
+	</table>
+</body>
+</html>

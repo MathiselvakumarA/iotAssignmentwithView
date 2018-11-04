@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>KONE - Equipments Status Check Application</title>
+</head>
+<body>
+	<h1>Welcome to KONE Equipments CRUD Application</h1>
+	<h2>Select any one of the API operations:</h2>
+	<table border="1">
+		<tr>
+			<th>API Description</th>
+			<th>Action</th>
+		</tr>
+		<tr>
+			<td>Create a new Equipment</td>
+			<td><a th:href="@{/equipmentsService/createEquipment}">Create</a></td>
+		</tr>
+		<tr>
+			<td>Search Equipment by Equipment number</td>
+			<td><a th:href="@{/equipmentsService/searchEquipmentById}">Search</a></td>
+		</tr>
+		<tr>
+			<td>Search Equipment by Limit</td>
+			<td><a th:href="@{/equipmentsService/searchEquipmentByLimit}">SearchLimit</a></td>
+		</tr>
+		<tr>
+			<td>Delete Equipment by Equipment number</td>
+			<td><a th:href="@{/equipmentsService/deleteEquipmentById}">Delete</a></td>
+		</tr>
+	</table>
+</body>
+</html>

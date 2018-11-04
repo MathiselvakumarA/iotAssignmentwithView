@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Equipments Returned</title>
+</head>
+<body>
+	<h1>Equipment Details:</h1>
+	<br />
+	<table border="1">
+		<tr>
+			<th>Equipment Number</th>
+			<th>Address</th>
+			<th>Contract Start date</th>
+			<th>Contract End date</th>
+			<th>Status</th>
+		</tr>
+		<tr th:each="equipment:${equipmentList}">
+			<td th:utext="${equipment.equipmentNumber}"></td>
+			<td th:utext="${equipment.address}"></td>
+			<td th:utext="${equipment.contractStartDate}"></td>
+			<td th:utext="${equipment.contractEndDate}"></td>
+			<td th:utext="${equipment.status}"></td>
+		</tr>
+	</table>
+	<br />
+	<table>
+		<tr>
+			<th><a th:href="@{/equipmentsService/}">Back to Index</a></th>
+		</tr>
+	</table>
+</body>
+</html>

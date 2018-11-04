@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Retrieve Equipments by Limit</title>
+</head>
+<body>
+	<h1>Enter equipment search limit:</h1>
+	<form th:action="@{/equipmentsService/equipment/search}"
+		th:object="${limit}" method="get">
+		<table border="1">
+			<tr>
+				<td><label for="limit">Limit to search: </label></td>
+				<td><input type="number" id="limit" name="limit"
+					autofocus="autofocus" /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Search Equipments"
+					style="margin-left: 30%; font-weight: 700;" /></td>
+			</tr>
+		</table>
+	</form>
+	<br />
+	<table>
+		<tr>
+			<th><a th:href="@{/equipmentsService/}">Back to Index</a></th>
+		</tr>
+	</table>
+</body>
+</html>
